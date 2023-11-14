@@ -8,7 +8,7 @@ import LatestWork from './Pages/LatestWork.jsx';
 
 const App = () => {
   return(
-    <Router>
+    <Router basename='/Portfolio-Website'>
       <Routes>
         <Route path='/'>
           <Route index element = {<Home/>}/>
