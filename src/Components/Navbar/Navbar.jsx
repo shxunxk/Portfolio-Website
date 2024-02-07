@@ -1,19 +1,18 @@
 import React from 'react'
 import './Navbar.scss';
 import {motion} from 'framer-motion'
-import Sidebar from '../Sidebar/Sidebar';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
     <div className='navbar'>
-      <Sidebar/>
       <div className='wrapper'>
-        <motion.span initial={{opacity:0, scale:0.5}} animate={{opacity:1, scale:0.5}} transition={{duration:1}}>Shaunak Nagvenkar</motion.span>
+        <motion.span initial={{opacity:0, scale:0.5}} animate={{opacity:1, scale:0.8}} transition={{duration:1}}>Shaunak Nagvenkar</motion.span>
         <div className='social' >
-            <a href="" target="_blank"><img src='/linkedin.png' alt=""/></a>
+            <Link to="https://www.linkedin.com/in/shaunak-nagvenkar-b3781321a/" target="_blank"><img src='/linkedin.png' alt=""/></Link>
             <a href="" target="_blank"><img src='/facebook.png' alt=""/></a>
             <a href="" target="_blank"><img src='/instagram.png' alt=""/></a>
-            <a href="" target="_blank"><img src='/github.png' alt=""/></a>
+            <Link href="https://www.github.com/shxunxk" target="_blank"><img src='/github.png' alt=""/></Link>
         </div>
       </div>
     </div>
