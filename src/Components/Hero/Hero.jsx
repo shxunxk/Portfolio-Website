@@ -48,10 +48,10 @@ export default function hero() {
           <motion.h1 variants={textVariants}><p>Machine Learning .<br/> Data Science and Analytics .<br/> Web Development .</p></motion.h1>
           <motion.div variants={textVariants} className='buttons'>
             <Link to='/latest-work'>
-              <button> Latest Work </button>
+              <div className='button'> Latest Work </div>
             </Link>
-            <Link to='contact-me'>
-              <button> Contact Me </button>
+            <Link to='/about'>
+              <div className='button'> About </div>
             </Link>
           </motion.div>
           {/* <motion.img variants={textVariants} animate="scrollButton" src="./scroll.png" alt="Scroll down" className='scrollDown'/>" */}

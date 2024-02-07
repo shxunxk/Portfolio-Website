@@ -30,13 +30,14 @@ const itemVariants={
   }
 }
 
-const items = ['Homepage', 'Services', 'Port'];
+const items = ['Homepage', 'Latest Work', 'About Me'];
+const path = ['', 'latest-work', 'about']
 
 export default function Links() {
   return (
     <motion.div className='links' variants={variants}>
-       {items.map(item => (
-         <motion.a href={`#${item}`} key={item} variants={itemVariants}>
+       {items.map((item, index) => (
+         <motion.a href={`/${path[index]}`} key={item} variants={itemVariants}>
            {item}
          </motion.a>
        ))}
