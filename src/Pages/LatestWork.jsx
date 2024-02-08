@@ -1,4 +1,3 @@
-import React from 'react'
 import WorkCard from '../Components/WorkCard/WorkCard.jsx'
 
 export default function LatestWork() {
