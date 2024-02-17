@@ -1,10 +1,16 @@
 .card{
     width: 300px;
+    display: flex;
     .image{
-        height: 200px;
+        .img{
+            height: 160px;
+            width: 160px;
+        }
+        .name{
+            height: 40px;
+        }
     }
-
-    .name{
-        width: 200px;
+    .text{
+        height: 200px;
     }
 }
