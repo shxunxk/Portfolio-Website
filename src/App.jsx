@@ -4,7 +4,7 @@ import About from './Pages/About.jsx';
 import Home from './Pages/Home.jsx';
 import LatestWork from './Pages/LatestWork.jsx';
 import Sidebar from './Components/Sidebar/Sidebar.jsx';
-import WorkActivity from './Pages/WorkActivity.jsx';
+// import WorkActivity from './Pages/WorkActivity.jsx';
 
 const App = () => {
   return (
