@@ -1,4 +1,4 @@
-import './about.scss'
+import './About.scss'
 import {motion} from 'framer-motion'
 import { useState, useEffect } from 'react';
 import Navbar from '../Components/Navbar/Navbar';
