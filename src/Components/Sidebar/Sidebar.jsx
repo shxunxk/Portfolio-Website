@@ -1,15 +1,14 @@
-import React, {useState} from 'react'
-import './Sidebar.scss'
-import ToggleButtons from './ToggleButtons/ToggleButtons'
+import React, { useState } from 'react';
+import './Sidebar.scss';
+import ToggleButtons from './ToggleButtons/ToggleButtons';
 import Links from './Links/Links';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function Sidebar() {
-
   const [open, setOpen] = useState(false);
 
   const variants = {
-    open:{
+    open: {
       clipPath: "circle(1200px at 50% 50%)",
       transition: {
         type: "spring",
@@ -17,7 +16,7 @@ export default function Sidebar() {
         delay: 0.5
       },
     },
-    closed:{
+    closed: {
       clipPath: "circle(30px at 12.3% 6.3%)",
       transition: {
         delay: 0.5,
@@ -29,11 +28,11 @@ export default function Sidebar() {
   };
 
   return (
-    <motion.div className='sidebar' animate={open ? "open" : "closed"}>
-      <motion.div className='bg' variants={variants}>
-        <Links/>
+    <motion.div className='sidebar' animate={open ? "open" : "closed"} variants={variants}>
+      <motion.div className='bg'>
+        <Links />
       </motion.div>
-      <ToggleButtons setOpen={setOpen}/>
+      <ToggleButtons setOpen={setOpen} />
     </motion.div>
-  )
+  );
 }
