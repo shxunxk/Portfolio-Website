@@ -15,14 +15,6 @@ const textVariants = {
       staggerChildren: 0.1,
     },
   },
-  scrollButton: {
-    opacity: 0,
-    y: 10,
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-    },
-  },
 }
 
 const sliderVariants = {
@@ -47,21 +39,17 @@ export default function hero() {
           <motion.h1 variants={textVariants}><p>Machine Learning .<br/> Data Science and Analytics .<br/> Web Development .</p></motion.h1>
           <motion.div variants={textVariants} className='buttons'>
             <Link to='/latest-work'>
-              <div className='button'> Latest Work </div>
+              <button className='button'> Latest Work </button>
             </Link>
             <Link to='/about'>
-              <div className='button'> About </div>
+              <button className='button'> About </button>
             </Link>
           </motion.div>
-          {/* <motion.img variants={textVariants} animate="scrollButton" src="./scroll.png" alt="Scroll down" className='scrollDown'/>" */}
         </motion.div>
       </div>
       <motion.div className="slidingText" variants={sliderVariants} initial="initial" animate="animate"> 
         Learn.Work.Create
       </motion.div>
-      <div className='imageContainer'>
-        {/* <img src="./hero.png" alt="Hero"/> */}
-      </div>
     </div>
   )
 }

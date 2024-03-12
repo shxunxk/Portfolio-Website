@@ -1,15 +1,13 @@
 import Hero from '../Components/Hero/Hero'
 import Navbar from '../Components/Navbar/Navbar';
-import Sidebar from '../Components/Sidebar/Sidebar';
 
 const Home = ()=>{
     return(
     <>
-    <section id='Homepage'> 
-        <Navbar/>
+    <div id='Homepage' style={{backgroundImage: 'linear-gradient(180deg, #36059f, #111132)', minHeight: '100vh', display: "flex", flexDirection: 'column'}}> 
+        <Navbar title={'Shaunak Nagvenkar'}/>
         <Hero/>
-    </section>
-    <Sidebar/>
+    </div>
     </>
     )
 };

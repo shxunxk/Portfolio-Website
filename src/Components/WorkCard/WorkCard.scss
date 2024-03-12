@@ -1,16 +1,23 @@
 .card{
-    width: 300px;
+    width: auto;
+    height: auto;
     display: flex;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    padding: 10px;
     .image{
         .img{
             height: 160px;
             width: 160px;
         }
-        .name{
-            height: 40px;
-        }
+        // .name{
+            
+        // }
     }
     .text{
         height: 200px;
+        width: auto;
+        height: auto;
+        padding: 20px;
     }
 }

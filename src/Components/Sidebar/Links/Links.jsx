@@ -29,8 +29,8 @@ const itemVariants={
   }
 }
 
-const items = ['Homepage', 'Latest Work', 'About Me'];
-const path = ['', 'latest-work', 'about']
+const items = ['Homepage', 'Latest Work', 'About Me', 'Work Experience'];
+const path = ['', 'latest-work', 'about', 'work-activities']
 
 export default function Links() {
   return (

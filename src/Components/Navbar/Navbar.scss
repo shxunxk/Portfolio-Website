@@ -1,21 +1,24 @@
 .navbar{
-    height: 100px;
+    height: 100%;
     color: rgb(255, 255, 255);
 
     .wrapper{
-        max-width: 1366px;
-        margin: auto;
+        margin-left: 20px;
+        margin-right: 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         height: 100%;
 
         span{
+            padding-left: 100px;
             font-weight: bold;
             font-size: 3rem;
+            padding-top: 20px;
         }
 
         .social{
+            padding-top: 20px;
             display: flex;
             gap: 20px;
 
@@ -24,5 +27,6 @@
                 height: 20px;
             }
         }
+
     }
 }
