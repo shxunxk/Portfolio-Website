@@ -19,10 +19,10 @@ const textVariants = {
 
 const sliderVariants = {
   initial: {
-    x: 0,
+    x: '100%',
   },
   animate: {
-    x: "-220%",
+    x: "-100%",
     transition: {
       repeat: Infinity,
       repeatType: "mirror",
@@ -42,7 +42,7 @@ export default function hero() {
               <button className='button'> Latest Work </button>
             </Link>
             <Link to='/about'>
-              <button className='button'> About </button>
+              <button className='button'> About Me </button>
             </Link>
           </motion.div>
         </motion.div>

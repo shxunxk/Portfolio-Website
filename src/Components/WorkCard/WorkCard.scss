@@ -11,10 +11,12 @@
         .img{
             height: 160px;
             width: 160px;
+            border: 2px solid black;
+            border-radius: 20px;
         }
-        // .name{
-            
-        // }
+        .name{
+            text-align: center;
+        }
     }
     .text{
         height: 200px;

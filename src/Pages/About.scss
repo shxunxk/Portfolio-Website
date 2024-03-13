@@ -1,6 +1,7 @@
 .About{
     // overflow: hidden;
     position: relative;
+    color: black;
     .projects{
         .main{
             padding: 30px 20px 0px 20px;
@@ -16,7 +17,6 @@
                 padding-top: 20px;
                 padding-bottom: 20px;
                 height: 100vh;
-                background-color: 'linear-gradient(180deg, #36059f, #111132)';
                 text-align: center;
             }
             .about-content{
