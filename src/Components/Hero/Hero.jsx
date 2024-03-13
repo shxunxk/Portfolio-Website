@@ -31,31 +31,31 @@ const sliderVariants = {
 },
 }
 
-// const buttonVar = {
-//   initial: {
-//     y: 0,
-//   },
-//   up: {
-//     y: 100,
-//     transition: {
-//       duration: 1,
-//       ease: "easeInOut",
-//     },
-//   },
-//   down: {
-//     y: 0,
-//     transition: {
-//       duration: 1,
-//       ease: "easeInOut",
-//     },
-//   },
-// };
-// setInterval(() => {
-//   buttonVar.animate = buttonVar.up;
-//   setTimeout(() => {
-//     buttonVar.animate = buttonVar.down;
-//   }, 1000);
-// }, 2000);
+const buttonVar = {
+  initial: {
+    y: 0,
+  },
+  up: {
+    y: 100,
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+    },
+  },
+  down: {
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+    },
+  },
+};
+setInterval(() => {
+  buttonVar.animate = buttonVar.up;
+  setTimeout(() => {
+    buttonVar.animate = buttonVar.down;
+  }, 1000);
+}, 2000);
 
 export default function hero() {
   return (
