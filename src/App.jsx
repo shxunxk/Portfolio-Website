@@ -10,7 +10,7 @@ const App = () => {
   return (
     <Router>
       <div className='sidebar'>
-        <Sidebar /> 
+        {/* <Sidebar />  */}
         </div>
         <div className="app-container">
           <Routes>

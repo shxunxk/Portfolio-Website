@@ -1,4 +1,5 @@
 import './About.scss'
+import { Link } from 'react-router-dom';
 import {motion} from 'framer-motion'
 import { useState, useEffect } from 'react';
 import Navbar from '../Components/Navbar/Navbar';
@@ -42,6 +43,12 @@ export default function About() {
                 <motion.h2 style={{fontSize: '5rem', display: 'flex', flexDirection: 'column'}} initial={{ x: 0 }} animate={{ x: scrollY > 1600 ? -2000 : 0 }} transition={{ duration: 0.7 }}>Internships</motion.h2>
                 <motion.ul style={{fontSize: '2rem'}} initial={{ x: 0 }} animate={{ x: scrollY > 1600 ? -2000 : 0 }} transition={{ duration: 0.7 }}>Data Analyst Intern<br></br>Remote Software Solutions, Goa</motion.ul>
                 <motion.p style={{fontSize: '3rem', padding: '5px', textAlign: 'center'}} initial={{ x: 0 }} animate={{ x: scrollY > 1600 ? -2000 : 0 }} transition={{ duration: 0.7 }}>Worked as a Data Analyst at the firm and learnt real time implementation of SQL and Power BI in the field of Database Engineering and Data Analytics</motion.p>
+              </section>
+              <section id='sec' className='details'>
+                <motion.h2 style={{fontSize: '5rem', display: 'flex', flexDirection: 'column'}} initial={{ x: 0 }} animate={{ x: scrollY > 2400 ? -2000 : 0 }} transition={{ duration: 0.7 }}>Contact</motion.h2>
+                <motion.ul style={{fontSize: '2rem'}} initial={{ x: 0 }} animate={{ x: scrollY > 2400 ? -2000 : 0 }} transition={{ duration: 0.7 }}>Email: <Link to='mailto:ssnagvenkar@gmail.com'>ssnagvenkar@gmail.com</Link></motion.ul>
+                <motion.h2 style={{fontSize: '5rem', display: 'flex', flexDirection: 'column'}} initial={{ x: 0 }} animate={{ x: scrollY > 2400 ? -2000 : 0 }} transition={{ duration: 0.7 }}>Education</motion.h2>
+                <motion.ul style={{fontSize: '2rem'}} initial={{ x: 0 }} animate={{ x: scrollY > 2400 ? -2000 : 0 }} transition={{ duration: 0.7 }}>Bachelors Degree in the field of Computer Science Engineering from Vellore Institute of Technology, Vellore</motion.ul>
               </section>
         </div>
       </div>
