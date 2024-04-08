@@ -1,20 +1,16 @@
 .Latest-Work{
-    // overflow: hidden;
     position: relative;
     color: black;
+    .experience{
+        padding-top: 40px;
+    }
     .projects{
         padding-top: 40px;
         .main{
             padding: 0px 20px 0px 20px;
-            display: flex;
-            // .vertical-line{
-            //     border-left: 2px solid #ffffff;
-            //     height: 100px;
-            //     margin: 0 10px;
-            // }
             .section{
                 flex: 1;
-                margin: 30px
+                width:100%
             }
         }
     }

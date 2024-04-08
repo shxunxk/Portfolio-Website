@@ -2,26 +2,40 @@
     width: auto;
     height: auto;
     display: flex;
-    border-radius: 20px;
-    border: 3px solid #000000;
+    border-radius: 10px;
+    border: 1px solid #000000;
     padding: 10px;
     background-color: rgb(255, 255, 255);
     color: #000000;
     .image{
-        .img{
-            height: 160px;
-            width: 160px;
-            border: 2px solid black;
-            border-radius: 20px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        .imge{
+            .img{
+                height: 160px;
+                width: 160px;
+                border: 1px solid black;
+                border-radius: 8px;
+            }
         }
-        .name{
-            text-align: center;
+        .textBox{
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            .name{
+                text-align: center;
+            }
         }
     }
+
     .text{
         height: 200px;
-        width: auto;
+        flex: 1;
         height: auto;
         padding: 20px;
+        justify-content: space-between;
     }
 }

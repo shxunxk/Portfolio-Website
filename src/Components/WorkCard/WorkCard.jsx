@@ -1,15 +1,21 @@
-import React from 'react'
 import './WorkCard.scss'
 
 export default function WorkCard({item}) {
   return (
     <div className='card'>
         <div className='image'>
-            <img src={item.img} className='img'></img>
-            <p className='name'>{item.name}</p>
+            <div className='imge'>
+              <img src={item.img} className='img'></img>
+            </div>
+            <br></br>
+            <div className='textBox'>
+              <p className='name'>{item.name}</p>
+            </div>
         </div>
         <div className='text'>
-            <p>{item.desc}</p>
+            {item.role && <p>Role: {item.role}</p>}
+            <br></br>
+            <p>Description: {item.desc}</p>
         </div>
     </div>
   )
