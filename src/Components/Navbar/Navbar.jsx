@@ -7,22 +7,25 @@ export default function Navbar({title}) {
 
   const [state, setState] = useState(0)
 
-  const [img, setImg] =  useState('linkedin.png')
+  const [img, setImg] =  useState('menu.png')
 
   const dropdown = ()=>{
     setState(!state)
-    if(img === "linkedin.png"){
-      setImg('instagram.png')
+    if(img === "menu.png"){
+      setImg('no.png')
     }else{
-      setImg('linkedin.png')
+      setImg('menu.png')
     }
   }
 
+  const options = [{'Home':'/'},{'Latest Work': '/latest-work/'},{'About':'/about/'}]
+
+  console.log(options)
   return (
     <div className='navbar'>
       <div className='wrapper'>
-        <div>
-          <img src={img} onClick={()=>dropdown()}/>
+        <div style={{backgroundColor:'white', width:'2%', height:'6%', justifyContent:'center', alignItems:'center', borderRadius:'30px'}}>
+          <img src={img} style={{height:'10px'}} onClick={()=>dropdown()}/>
         </div>
         <motion.span initial={{opacity:0, scale:0.0}} animate={{opacity:1, scale:1}} transition={{duration:0.5}} className='head'>{title}</motion.span>
         <div className='social' >
@@ -31,11 +34,18 @@ export default function Navbar({title}) {
             <Link to="https://www.github.com/shxunxk" target="_blank"><img src='github.png' alt=""/></Link>
         </div>
       </div>
-      {img === 'instagram.png' && 
+      {img === 'no.png' && 
           <div className='lower'>
             <ul>
-              <div className='list'>Home</div>
-              <div className='list'>About</div>
+            {options.map((option, index) => {
+              const key = Object.keys(option)[0];  // Extract the key
+              const value = option[key];           // Extract the value
+              return (
+              <div key={index} className='list'>
+                <a href={value}>{key}</a>
+              </div>
+              );
+            })}
             </ul>
           </div>}
     </div>

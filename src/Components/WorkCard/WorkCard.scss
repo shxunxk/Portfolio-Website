@@ -1,5 +1,7 @@
 .card:hover {
-    border: 2px solid #000000; /* Apply border when hovering */
+    border: 2px solid #000000;
+    color:rgb(255, 255, 255);
+    background-color:#8a039c8f;
 }
 
 .card{
@@ -7,10 +9,9 @@
     height: auto;
     display: flex;
     border-radius: 10px;
-    padding: 10px;
-    background-color: rgb(255, 248, 215);
+    background-color:#4d097566;
     color: #000000;
-    padding: 20px;
+    padding: 2%;
     .image{
         display:flex;
         flex-direction: column;

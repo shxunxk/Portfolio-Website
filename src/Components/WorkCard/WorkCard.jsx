@@ -14,9 +14,9 @@ export default function WorkCard({item}) {
               <p className='name'>{item.name}</p>
             </div>
         </div>
-        <div className='text'>
+        <div className='text' style={{display:'flex', flexDirection:'column', gap:'2%'}}>
             {item.role && <p>Role: {item.role}<br></br></p>}
-            {item.desc && <p>Description: {item.desc}<br></br></p>}
+            {item.desc && <p>{item.desc}<br></br></p>}
         </div>
     </div>
     </Link>
