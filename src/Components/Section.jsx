@@ -8,7 +8,7 @@ export default function Section({title, projects}) {
             {projects.map((item, index)=>{
               return(
                 // eslint-disable-next-line react/jsx-key
-                <div key={index} style={{paddingBottom: '20px', width: '90%'}}>
+                <div key={index} style={{paddingBottom: '20px', width: '100%'}}>
                     <WorkCard item={item}/>
                 </div>
               )

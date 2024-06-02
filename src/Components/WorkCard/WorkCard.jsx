@@ -1,8 +1,10 @@
 import './WorkCard.scss'
+import { Link } from 'react-router-dom'
 
 export default function WorkCard({item}) {
   return (
-    <div className='card'>
+    <Link to={`/workinfo/${encodeURIComponent(JSON.stringify(item))}`}>
+      <div className='card'>
         <div className='image'>
             <div className='imge'>
               <img src={item.img} className='img'></img>
@@ -13,10 +15,11 @@ export default function WorkCard({item}) {
             </div>
         </div>
         <div className='text'>
-            {item.role && <p>Role: {item.role}</p>}
-            <br></br>
-            <p>Description: {item.desc}</p>
+            {item.role && <p>Role: {item.role}<br></br></p>}
+            {item.desc && <p>Description: {item.desc}<br></br></p>}
         </div>
     </div>
+    </Link>
+    
   )
 }

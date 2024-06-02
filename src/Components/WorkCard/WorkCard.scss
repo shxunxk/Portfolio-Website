@@ -1,23 +1,26 @@
+.card:hover {
+    border: 2px solid #000000; /* Apply border when hovering */
+}
+
 .card{
     width: auto;
     height: auto;
     display: flex;
     border-radius: 10px;
-    border: 1px solid #000000;
     padding: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 248, 215);
     color: #000000;
+    padding: 20px;
     .image{
         display:flex;
         flex-direction: column;
         align-items: center;
-        width: 200px;
+        width: 20%;
         .imge{
             .img{
-                height: 160px;
-                width: 160px;
-                border: 1px solid black;
-                border-radius: 8px;
+                max-height: 160px;
+                max-width: 160px;
+                border-radius: 5px;
             }
         }
         .textBox{
@@ -35,7 +38,6 @@
         height: 200px;
         flex: 1;
         height: auto;
-        padding: 20px;
         justify-content: space-between;
     }
 }

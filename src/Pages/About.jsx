@@ -25,7 +25,6 @@ export default function About() {
     return (
       <div className="About" style={{display: 'flex', flexDirection: 'column', minHeight: '100%', overflow: 'hidden'}}>
       <div className='projects'>
-        <Navbar title='About'/>
         <div className='main'>
           <section id = 'sec' className='about-content'>
             <motion.h2 style={{fontSize: '5rem'}} initial={{ x: 0 }} animate={{ x: scrollY > 400 ? -1000 : 0 }} transition={{ duration: 0.7 }}>Who Am I?</motion.h2>
@@ -40,7 +39,7 @@ export default function About() {
               </section>
               <section id = 'sec' className='skills'>
                 <motion.h2 style={{fontSize: '5rem', display: 'flex', flexDirection: 'column'}} initial={{ x: 0 }} animate={{ x: scrollY > 2600 ? -2000 : 0 }} transition={{ duration: 0.7 }}>Skills</motion.h2>
-                  <motion.ul style={{fontSize: '2rem'}} initial={{ x: 0 }} animate={{ x: scrollY > 2600 ? 2000 : 0 }} transition={{ duration: 0.7 }}><Link to='./skillset'>Machine Learning and Data Analysis</Link></motion.ul>
+                  <motion.ul style={{fontSize: '2rem'}} initial={{ x: 0 }} animate={{ x: scrollY > 2600 ? 2000 : 0 }} transition={{ duration: 0.7 }}><Link to='/skillset'>Machine Learning and Data Analysis</Link></motion.ul>
                   <motion.ul style={{fontSize: '2rem'}} initial={{ x: 0 }} animate={{ x: scrollY > 2600 ? 2000 : 0 }} transition={{ duration: 0.7 }}><Link to='./skillset'>Full-Stack Web Development</Link></motion.ul>
                   <motion.ul style={{fontSize: '2rem'}} initial={{ x: 0 }} animate={{ x: scrollY > 2600 ? 2000 : 0 }} transition={{ duration: 0.7 }}><Link to='./skillset'>Data Science and Analytics</Link></motion.ul>
               </section>

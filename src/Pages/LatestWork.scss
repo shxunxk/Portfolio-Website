@@ -5,7 +5,13 @@
         padding-top: 40px;
     }
     .projects{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Align items vertically center */
+        align-items: center; /* Align items horizontally center */
         padding-top: 40px;
+        min-height: 100vh;
+        
         .main{
             padding: 0px 20px 0px 20px;
             .section{

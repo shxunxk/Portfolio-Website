@@ -1,8 +1,6 @@
 import './LatestWork.scss'
 import Section from '../Components/Section.jsx'
-import Navbar from '../Components/Navbar/Navbar.jsx'
 import Bottom from '../Components/Bottom/Bottom.jsx'
-import {motion} from 'framer-motion'
 
 export default function LatestWork() {
 
@@ -11,26 +9,22 @@ export default function LatestWork() {
   {name:'Restaurant Managemenet System', img:'github.png', "desc": 'As part of this project, I am creating a Web Application interface for a restaurant to streamline its administration procedures as well as a database to hold the data.'}, 
   {name:'AgroHealth - Potato Defect Detector', img:'github.png', "desc": 'In the project that follows, I am working on a machine learning and deep learning model to assess the health of potatoes in a field and decide whether they are normal and safe to eat.'},
   {name:'Sonora - Music Streaming Application', img:'github.png', "desc": 'With an emphasis on creating a superior UI and UX, the ensuing project is a mobile application that mimics other global music streaming apps.'}]
-  const completedIntern = [{name:'Remote Software Solution', "img":'Kalaburagi.png', "role": 'Data Analyst', "desc": 'Worked as a Data Analyst at the firm and learnt real time implementation of SQL and Power BI in the field of Database Engineering and Data Analytics.'},]
+  const completedIntern = [{name:'Remote Software Solution', "img":'RSS.webp', "role": 'Data Analyst', "desc": 'Worked as a Data Analyst at the firm and learnt real time implementation of SQL and Power BI in the field of Database Engineering and Data Analytics.'},]
 
 
   return (
     <>
       <div className="Latest-Work" style={{backgroundColor:'white', display: 'flex', flexDirection: 'column'}}>
-      <Navbar title={'Latest Work'}/>
         <div className='projects'>
-          <h1 className='header' style={{textAlign: 'center', fontSize: '40px', paddingBottom:'50px'}}>Internships</h1>
+          <h1 className='header' style={{textAlign: 'center', fontSize: '40px', paddingBottom:'10%'}}>Internships</h1>
             <div className='main'>
               <div id='completed'className='section'>
                 <Section title = 'Completed' projects = {completedIntern}/>
               </div>
+            </div>        
             </div>
-            {/* <motion.h2 style={{fontSize: '5rem', display: 'flex', flexDirection: 'column'}}>Internships</motion.h2>
-            <motion.ul style={{fontSize: '2rem'}}>Data Analyst Intern<br></br>Remote Software Solutions, Goa</motion.ul>
-            <motion.p style={{fontSize: '3rem', padding: '5px', textAlign: 'center'}}>Worked as a Data Analyst at the firm and learnt real time implementation of SQL and Power BI in the field of Database Engineering and Data Analytics</motion.p> */}
-        </div>
         <div className='projects'>
-          <h1 className='header' style={{textAlign: 'center', fontSize: '40px', paddingBottom:'50px'}}>Projects</h1>
+          <h1 className='header' style={{textAlign: 'center', fontSize: '40px', paddingBottom:'10%'}}>Projects</h1>
           <div className='main'>
             <div id='completed'className='section'>
               <Section title = 'Completed' projects = {completed}/>
@@ -39,7 +33,6 @@ export default function LatestWork() {
               <Section title = 'Pending' projects = {pending}/>
             </div>
           </div>
-          <Bottom/>
           <p style={{textAlign:'center'}}>The projects with github image as their profile are in development phase.</p>
         </div>
       </div>
