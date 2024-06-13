@@ -50,7 +50,6 @@ export default function About() {
                 <motion.p style={{fontSize: '3rem', padding: '5px', textAlign: 'center'}} initial={{ x: 0 }} animate={{ x: scrollY > 1800 ? -2000 : 0 }} transition={{ duration: 0.7 }}>Worked as a Data Analyst at the firm and learnt real time implementation of SQL and Power BI in the field of Database Engineering and Data Analytics</motion.p>
               </section> */}
         </div>
-        <Bottom/>
       </div>
     </div>
   )

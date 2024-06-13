@@ -13,9 +13,10 @@ export default function Bottom() {
                   </div>
                 </div>
                 <div className='sub' id='sub2'>
-                  <p><Link to='/'>Home</Link></p>
-                  <p><Link to='/latest-work'>Latest Work</Link></p>
-                  <p><Link to='/about'>About</Link></p>
+                  <p className='bl'><Link to='/'>Home</Link></p>
+                  <p className='bl'><Link to='/latest-work'>Latest Work</Link></p>
+                  <p className='bl'><Link to='/about'>About</Link></p>
+                  <p className='bl'><Link to='/resume'>Resume</Link></p>
                 </div>
                 <div className='sub' id='sub3'>
                   <h3>Social Media</h3>

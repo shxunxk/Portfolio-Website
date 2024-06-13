@@ -19,7 +19,7 @@ export default function LatestWork() {
           <h1 className='header' style={{textAlign: 'center', fontSize: '40px', paddingBottom:'10%'}}>Internships</h1>
             <div className='main'>
               <div id='completed'className='section'>
-                <Section title = 'Completed' projects = {completedIntern}/>
+                <Section projects = {completedIntern}/>
               </div>
             </div>        
             </div>

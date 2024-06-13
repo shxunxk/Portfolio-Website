@@ -6,8 +6,7 @@ import { useState } from 'react';
 export default function Navbar({title}) {
 
   const [state, setState] = useState(0)
-
-  const [img, setImg] =  useState('menu.png')
+  const [img, setImg] =  useState("menu.png")
 
   const dropdown = ()=>{
     setState(!state)
@@ -18,14 +17,14 @@ export default function Navbar({title}) {
     }
   }
 
-  const options = [{'Home':'/'},{'Latest Work': '/latest-work/'},{'About':'/about/'}]
+  const options = [{'Home':'/'},{'Latest Work': '/latest-work'},{'About':'/about'},{'Resume':'/resume'}]
 
   console.log(options)
   return (
     <div className='navbar'>
       <div className='wrapper'>
-        <div style={{backgroundColor:'white', width:'2%', height:'6%', justifyContent:'center', alignItems:'center', borderRadius:'30px'}}>
-          <img src={img} style={{height:'10px'}} onClick={()=>dropdown()}/>
+        <div style={{backgroundColor:'white', width:'3%', height:'10%', alignItems:'center', borderRadius:'30px'}}>
+          <img src={img||`menu.png`} style={{height:'10px'}} onClick={()=>dropdown()}/>
         </div>
         <motion.span initial={{opacity:0, scale:0.0}} animate={{opacity:1, scale:1}} transition={{duration:0.5}} className='head'>{title}</motion.span>
         <div className='social' >
@@ -38,8 +37,8 @@ export default function Navbar({title}) {
           <div className='lower'>
             <ul>
             {options.map((option, index) => {
-              const key = Object.keys(option)[0];  // Extract the key
-              const value = option[key];           // Extract the value
+              const key = Object.keys(option)[0];
+              const value = option[key];
               return (
               <div key={index} className='list'>
                 <a href={value}>{key}</a>
