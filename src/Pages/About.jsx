@@ -27,15 +27,15 @@ export default function About() {
       <div className='projects'>
         <div className='main'>
           <section id = 'sec' className='about-content'>
-            <motion.h2 style={{fontSize: '5rem'}} initial={{ x: 0 }} animate={{ x: scrollY > 400 ? -1000 : 0 }} transition={{ duration: 0.7 }}>Who Am I?</motion.h2>
-                <motion.p style={{fontSize: '3rem', padding: '0px', textAlign: 'center'}} initial={{ x: 0 }} animate={{ x: scrollY > 400 ? -3000 : 0 }} transition={{ duration: 0.7 }}>
+            <motion.h2 style={{fontSize: '5rem'}} initial={{ x: 0 }} animate={{ x: scrollY > 300 ? -1000 : 0 }} transition={{ duration: 2 }}>Who Am I?</motion.h2>
+                <motion.p style={{fontSize: '3rem', padding: '0px', textAlign: 'center'}} initial={{ x: 0 }} animate={{ x: scrollY > 300 ? -1000 : 0 }} transition={{ duration: 1.5 }}>
                   Hi this is Shaunak, I am a passionate and dedicated individual with a strong background in <strong>Machine Learning</strong>, <strong>Data Science</strong>, and <strong>Web Development</strong>.
                 </motion.p>
               </section>
               <section id='sec' className='education'>
-                <motion.h2 style={{fontSize: '5rem', display: 'flex', flexDirection: 'column'}} initial={{ x: -800 }} animate={{ x: scrollY > 1100 ? 1000 : 0 }} transition={{ duration: 0.7 }}>Education and other details</motion.h2>
-                <motion.ul style={{fontSize: '2rem'}} initial={{ x: -1000 }} animate={{ x: scrollY > 1100 ? 2000 : 0 }} transition={{ duration: 0.7 }}>Based in Goa, India</motion.ul>
-                <motion.ul style={{fontSize: '2rem'}} initial={{ x: -1000 }} animate={{ x: scrollY > 1100 ? 2000 : 0 }} transition={{ duration: 0.7 }}>Pursuing Bachelors Degree in the field of Computer Science Engineering from Vellore Institute of Technology, Vellore</motion.ul>
+                <motion.h2 style={{fontSize: '5rem', display: 'flex', flexDirection: 'column'}} initial={{ x: -800 }} animate={{ x: scrollY > 1100 ? 1000 : 0 }} transition={{ duration: 2 }}>Education and other details</motion.h2>
+                <motion.ul style={{fontSize: '2rem'}} initial={{ x: -1000 }} animate={{ x: scrollY > 1100 ? 2000 : 0 }} transition={{ duration: 1.5 }}>Based in Goa, India</motion.ul>
+                <motion.ul style={{fontSize: '2rem'}} initial={{ x: -1000 }} animate={{ x: scrollY > 1100 ? 2000 : 0 }} transition={{ duration: 1.5 }}>Pursuing Bachelors Degree in the field of Computer Science Engineering from Vellore Institute of Technology, Vellore</motion.ul>
               </section>
               <section id = 'sec' className='skills'>
                 <motion.h2 style={{fontSize: '5rem', display: 'flex', flexDirection: 'column'}} initial={{ x: 0 }} animate={{ x: scrollY > 2600 ? -2000 : 0 }} transition={{ duration: 0.7 }}>Skills</motion.h2>

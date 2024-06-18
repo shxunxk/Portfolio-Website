@@ -14,7 +14,7 @@ export default function LatestWork() {
 
   return (
     <>
-      <div className="Latest-Work" style={{backgroundColor:'white', display: 'flex', flexDirection: 'column'}}>
+      <div className="Latest-Work" style={{backgroundColor:'white', display: 'flex', flexDirection: 'column', }}>
         <div className='projects'>
           <h1 className='header' style={{textAlign: 'center', fontSize: '40px', paddingBottom:'10%'}}>Internships</h1>
             <div className='main'>
