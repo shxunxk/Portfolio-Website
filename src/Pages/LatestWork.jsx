@@ -1,9 +1,8 @@
 import './LatestWork.scss'
 import Section from '../Components/Section.jsx'
-import Bottom from '../Components/Bottom/Bottom.jsx'
 
-export default function LatestWork() {
-
+export default function LatestWork({getPage}) {
+  getPage('Work Experience and Projects')
   const completed = [{name:'Kalaburagi Airport Website', "img":'Kalaburagi.png', "desc": 'Within this project, I collaborated as a team member to contribute to the development of the Frontend for a Management Information System. This system is specifically designed to support airport employees in their day-to-day tasks. My responsibilities included crafting an intuitive user interface, integrating design components, and implementing features aimed at improving the overall user experience for airport staff interacting with the MIS.'},]
   const pending = [{name:'Barbara - AI Virtual Assistant', img:'github.png', "desc": 'As part of my project, I am developing a clever artificial intelligence virtual assistant that can understand voice instructions from people and provide a general response.'}, 
   {name:'Restaurant Managemenet System', img:'github.png', "desc": 'As part of this project, I am creating a Web Application interface for a restaurant to streamline its administration procedures as well as a database to hold the data.'}, 
@@ -16,7 +15,7 @@ export default function LatestWork() {
     <>
       <div className="Latest-Work" style={{backgroundColor:'white', display: 'flex', flexDirection: 'column', }}>
         <div className='projects'>
-          <h1 className='header' style={{textAlign: 'center', fontSize: '40px', paddingBottom:'10%'}}>Internships</h1>
+          <h1 className='header' style={{textAlign: 'center', fontSize: '40px'}}>Internships</h1>
             <div className='main'>
               <div id='completed'className='section'>
                 <Section projects = {completedIntern}/>
@@ -24,7 +23,7 @@ export default function LatestWork() {
             </div>        
             </div>
         <div className='projects'>
-          <h1 className='header' style={{textAlign: 'center', fontSize: '40px', paddingBottom:'10%'}}>Projects</h1>
+          <h1 className='header' style={{textAlign: 'center', fontSize: '40px'}}>Projects</h1>
           <div className='main'>
             <div id='completed'className='section'>
               <Section title = 'Completed' projects = {completed}/>
@@ -33,7 +32,6 @@ export default function LatestWork() {
               <Section title = 'Pending' projects = {pending}/>
             </div>
           </div>
-          <p style={{textAlign:'center'}}>The projects with github image as their profile are in development phase.</p>
         </div>
       </div>
     </>

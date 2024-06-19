@@ -4,7 +4,6 @@ const WorkDetail = () => {
 
     const { item } = useParams();
     let a =JSON.parse(decodeURIComponent(item));
-    console.log(a['name'])
 
     return (
         <div className="head" style={{backgroundColor:'white', minHeight: '100vh', padding: '10%'}}>

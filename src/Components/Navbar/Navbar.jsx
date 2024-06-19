@@ -3,7 +3,7 @@ import {motion} from 'framer-motion'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-export default function Navbar({title}) {
+export default function Navbar({header}) {
 
   const [state, setState] = useState(0)
   const [img, setImg] =  useState("menu.png")
@@ -17,16 +17,15 @@ export default function Navbar({title}) {
     }
   }
 
-  const options = [{'Home':'/'},{'Latest Work': '/latest-work'},{'About':'/about'},{'Resume':'/resume'}]
+  const options = [{'Home':'/'},{'Latest Work': '/latest-work'},{'About':'/about'},{'Skills':'/skills'},{'Resume':'/resume'}]
 
-  console.log(options)
   return (
     <div className='navbar'>
       <div className='wrapper'>
         <div style={{backgroundColor:'white', width:'3%', height:'10%', alignItems:'center', borderRadius:'30px'}}>
           <img src={img||`menu.png`} style={{height:'10px'}} onClick={()=>dropdown()}/>
         </div>
-        <motion.span initial={{opacity:0, scale:0.0}} animate={{opacity:1, scale:1}} transition={{duration:0.5}} className='head'>{title}</motion.span>
+        <motion.span style={{fontSize:'25px'}} initial={{opacity:0, scale:0.0}} animate={{opacity:1, scale:1}} transition={{duration:0.5}} className='head'>{header}</motion.span>
         <div className='social' >
             <Link to="https://www.linkedin.com/in/shaunak-nagvenkar-b3781321a/" target="_blank"><img src='linkedin.png' alt=""/></Link>
             <Link to="https://www.instagram.com/_shaunxk_/" target="_blank"><img src='instagram.png' alt=""/></Link>

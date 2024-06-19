@@ -2,6 +2,9 @@
     // overflow: hidden;
     position: relative;
     color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     .projects{
         display: flex;
         flex-direction: column;
@@ -9,7 +12,6 @@
         align-items: center;
         width: 100%;
         .main{
-            padding: 30px 20px 0px 20px;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
@@ -19,13 +21,13 @@
                 flex-direction: column;
                 justify-content: space-evenly;
                 align-items: center;
-                padding-top: 20px;
-                padding-bottom: 20px;
-                height: 100vh;
+                min-height: 100vh;
                 text-align: center;
             }
             .about-content{
                 height: 80vh;
+                display: flex;
+                flex-direction: column;
             }
         }
         .contact{

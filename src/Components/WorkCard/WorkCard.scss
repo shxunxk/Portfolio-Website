@@ -1,25 +1,30 @@
-.card:hover {
-    color:rgb(255, 255, 255);
-    background-color:#000000;
-}
+// .card:hover {
+//     color:rgb(255, 255, 255);
+//     background-color:#000000;
+// }
 
 .card{
     border-radius: 10px;
     background-color:#ffffff;
-    border: 1px solid #000000;
     color: #000000;
     padding: 2%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 200px;
+    gap:10px;
+    text-align: center;
     .image{
-        .imge{
+        height: 80%;
+        display: flex;
+            justify-content: center;
             align-items: center;
             .img{
                 border-radius: 5px;
-                max-height: 50%;
-                max-width: 50%;
+                max-height: 100%;
+                max-width: 100%;
             }
-        }
         .textBox{
             .name{
                 text-align: center;

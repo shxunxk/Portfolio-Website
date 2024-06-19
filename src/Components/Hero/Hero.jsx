@@ -31,12 +31,13 @@ const sliderVariants = {
 },
 }
 
-export default function hero() {
+export default function hero({getPage}) {
+  getPage('Hi There!!')
   return (
     <div className='hero'>
       <div className='wrapper'>
         <motion.div variants={textVariants} className='textContainer' initial="initial" animate="animate">
-          <motion.h1 variants={textVariants}><p>Machine Learning .<br/> Data Science and Analytics .<br/> Web Development .</p></motion.h1>
+          <motion.h1 variants={textVariants}><p>Machine Learning .<br/> Data Science .<br/> Web Development .</p></motion.h1>
           <motion.div variants={textVariants} className='buttons'>
             <Link to='/latest-work'>
               <motion.button className='button'> Latest Work </motion.button>
