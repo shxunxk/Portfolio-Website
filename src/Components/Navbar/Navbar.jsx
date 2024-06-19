@@ -40,7 +40,7 @@ export default function Navbar({header}) {
               const value = option[key];
               return (
               <div key={index} className='list'>
-                <a href={value}>{key}</a>
+                <Link to={value}>{key}</Link>
               </div>
               );
             })}
