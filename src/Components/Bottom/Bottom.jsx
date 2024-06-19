@@ -14,6 +14,7 @@ export default function Bottom() {
                   <p className='bl'><Link to='/'>Home</Link></p>
                   <p className='bl'><Link to='/latest-work'>Latest Work</Link></p>
                   <p className='bl'><Link to='/about'>About</Link></p>
+                  <p className='bl'><Link to='/skills'>Skills</Link></p>
                   <p className='bl'><Link to='/resume'>Resume</Link></p>
                 </div>
                 <div className='sub' id='sub3'>

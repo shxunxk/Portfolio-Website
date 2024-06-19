@@ -10,9 +10,7 @@ export default function About({getPage}) {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -27,8 +25,8 @@ export default function About({getPage}) {
               <section id = 'sec' className='about-content'>
                 <motion.h2 style={{fontSize: '5rem'}} initial={{ x: 0 }} animate={{ x: scrollY > 300 ? -1000 : 0 }} transition={{ duration: 2 }}>Who Am I?</motion.h2>
                 <motion.p style={{fontSize: '3rem', padding: '0px', textAlign: 'center', display:'flex', flexDirection:'row',}} initial={{ x: 0 }} animate={{ x: scrollY > 300 ? -1000 : 0 }} transition={{ duration: 1.5 }}>
-                <motion.img style={{borderRadius:'20px'}}src={"SHAUNAK.jpg"}/>
-                <p>Hi this is Shaunak, I am a passionate and dedicated individual with a strong background in <strong>Machine Learning</strong>, <strong>Data Science</strong>, and <strong>Web Development</strong>.</p>
+                <img style={{borderRadius:'20px'}}src={"SHAUNAK.jpg"}/>
+                <p style={{alignContent:'center'}}>Hi this is Shaunak, he is a passionate and dedicated individual with a strong background in <strong>Machine Learning</strong>, <strong>Data Science</strong>, and <strong>Web Development</strong>.</p>
                 </motion.p>
               </section>
               <section id='sec' className='education'>
@@ -38,9 +36,9 @@ export default function About({getPage}) {
               </section>
               <section id = 'sec' className='skills'>
                 <motion.h2 style={{fontSize: '5rem', display: 'flex', flexDirection: 'column'}} initial={{ x: 0 }} animate={{ x: scrollY > 2600 ? -2000 : 0 }} transition={{ duration: 0.7 }}>Skills</motion.h2>
-                  <motion.ul style={{fontSize: '2rem'}} initial={{ x: 0 }} animate={{ x: scrollY > 2600 ? 2000 : 0 }} transition={{ duration: 0.7 }}><Link to='/skills'>Machine Learning and Data Analysis</Link></motion.ul>
-                  <motion.ul style={{fontSize: '2rem'}} initial={{ x: 0 }} animate={{ x: scrollY > 2600 ? 2000 : 0 }} transition={{ duration: 0.7 }}><Link to='/skills'>Full-Stack Web Development</Link></motion.ul>
-                  <motion.ul style={{fontSize: '2rem'}} initial={{ x: 0 }} animate={{ x: scrollY > 2600 ? 2000 : 0 }} transition={{ duration: 0.7 }}><Link to='/skills'>Data Science</Link></motion.ul>
+                  <motion.ul style={{fontSize: '2rem'}} initial={{ x: 0 }} animate={{ x: scrollY > 2600 ? 2000 : 0 }} transition={{ duration: 0.7 }}><Link to='/skills'>Artificial Intelligence</Link></motion.ul>
+                  <motion.ul style={{fontSize: '2rem'}} initial={{ x: 0 }} animate={{ x: scrollY > 2600 ? 2000 : 0 }} transition={{ duration: 0.7 }}><Link to='/skills'>Web Development</Link></motion.ul>
+                  <motion.ul style={{fontSize: '2rem'}} initial={{ x: 0 }} animate={{ x: scrollY > 2600 ? 2000 : 0 }} transition={{ duration: 0.7 }}><Link to='/skills'>Data Engineering</Link></motion.ul>
               </section>
         </div>
       </div>

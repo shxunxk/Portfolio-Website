@@ -1,13 +1,12 @@
-// .card:hover {
-//     color:rgb(255, 255, 255);
-//     background-color:#000000;
-// }
+.card:hover {
+    color:rgb(255, 255, 255);
+    background-color:#14150e;
+}
 
 .card{
     border-radius: 10px;
-    background-color:#ffffff;
+    background-color:#aeda12;
     color: #000000;
-    padding: 2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,9 +14,11 @@
     height: 200px;
     gap:10px;
     text-align: center;
+    background-color:"yellowgreen";
     .image{
         height: 80%;
         display: flex;
+        margin:'2%';
             justify-content: center;
             align-items: center;
             .img{

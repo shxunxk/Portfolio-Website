@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 export default function WorkCard({item}) {
   return (
-    // <Link to={`/workinfo/${encodeURIComponent(JSON.stringify(item))}`}>
-      <div className='card' style={{backgroundColor:"yellowgreen"}}>
+    <Link to={`/workinfo/${item.name}`}>
+      <div className='card' style={{}}>
         <div className='image'>
               <img src={item.img} className='img'></img>
         </div>
@@ -12,7 +12,7 @@ export default function WorkCard({item}) {
               <p className='name'>{item.name}</p>
             </div>
     </div>
-    // </Link>
+    </Link>
     
   )
 }

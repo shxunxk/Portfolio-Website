@@ -17,6 +17,11 @@ export default function Navbar({header}) {
     }
   }
 
+  const closeDropdown = () => {
+    setState(0);
+    setImg('menu.png');
+  };
+  
   const options = [{'Home':'/'},{'Latest Work': '/latest-work'},{'About':'/about'},{'Skills':'/skills'},{'Resume':'/resume'}]
 
   return (
@@ -40,7 +45,7 @@ export default function Navbar({header}) {
               const value = option[key];
               return (
               <div key={index} className='list'>
-                <Link to={value}>{key}</Link>
+                <Link to={value} onClick={closeDropdown}>{key}</Link>
               </div>
               );
             })}

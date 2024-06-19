@@ -23,8 +23,8 @@ const App = () => {
       <div style={{zIndex:100, position:'fixed', width:'100%', boxShadow: "0px 2px 4px rgba(0,1,0,0.8)", height: '60px'}}>
         <Navbar header={header}/>
       </div>
-      <div className='page' style={{justifyContent: 'center'}}>
-        <div className="app-container" style={{width: '100%', paddingTop: '150px'}}>
+      <div className='page' style={{}}>
+        <div className="app-container" style={{width: '100%', paddingTop: '150px', display:'flex', flexDirection:'column', justifyContent: 'center'}}>
             <Routes>
               <Route path="/">
                 <Route index element={<Home getPage={getPage}/>} />
@@ -39,7 +39,7 @@ const App = () => {
             <div style={{backgroundColor:'black', width:'100%', display:"flex", justifyContent:'center', borderRadius:'20px', padding:'20px'}}>
             <Bottom />
             </div>
-            <p style={{textAlign:'center'}}>Built using REACT VITE JS and FRAMER MOTION</p>
+            <p style={{textAlign:'center'}}>Built using REACT JS with VITE and FRAMER MOTION</p>
             </div>
           </div>
         </div>
