@@ -9,6 +9,7 @@ export default function LatestWork({getPage}) {
   {name:'AgroHealth - Potato Defect Detector', img:'github.png', "desc": 'In the project that follows, I am working on a machine learning and deep learning model to assess the health of potatoes in a field and decide whether they are normal and safe to eat.'},
   {name:'Sonora - Music Streaming Application', img:'github.png', "desc": 'With an emphasis on creating a superior UI and UX, the ensuing project is a mobile application that mimics other global music streaming apps.'}]
   const completedIntern = [{name:'Remote Software Solution', "img":'RSS.webp', "role": 'Data Analyst', "desc": 'Worked as a Data Analyst at the firm and learnt real time implementation of SQL and Power BI in the field of Database Engineering and Data Analytics.'},]
+  const cultural = [{name:'VIT Alumni Association (VITAA)', "img":'https://vaave.s3.amazonaws.com/assets/site_content/151534243/logo-cms.png', "role": 'Volunteer', "desc": 'Worked as a Data Analyst at the firm and learnt real time implementation of SQL and Power BI in the field of Database Engineering and Data Analytics.'},]
 
 
   return (
@@ -30,6 +31,14 @@ export default function LatestWork({getPage}) {
             </div>
             <div id='pending' className='section'>
               <Section title = 'Pending' projects = {pending}/>
+            </div>
+          </div>
+        </div>
+        <div className='projects'>
+          <h1 className='header' style={{textAlign: 'center', fontSize: '40px'}}>Cultural Activities</h1>
+          <div className='main'>
+            <div id='completed'className='section'>
+              <Section projects = {cultural}/>
             </div>
           </div>
         </div>
