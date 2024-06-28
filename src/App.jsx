@@ -55,7 +55,7 @@ const App = () => {
           </Routes>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0px', justifyContent: 'center', backgroundImage: `url('')`, alignItems: 'center', padding: '0px', width: '100%' }}>
             <Bottom />
-            <div style={{ textAlign: 'center', backgroundColor: 'beige', borderRadius: '0px', width: '100%' }}>
+            <div style={{ textAlign: 'center', backgroundColor: 'beige', borderRadius: '0px', width: '100%', overflow:'hidden'}}>
               <motion.p variants={sliderVariants} initial='initial' animate='animate' transition={{ duration: 1 }}>
                 Built using <strong>REACT JS</strong> with <strong>VITE</strong> and <strong>FRAMER MOTION</strong>
               </motion.p>

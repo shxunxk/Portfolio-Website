@@ -10,7 +10,7 @@ export default function LatestWork({getPage}) {
   // {name:'Sonora - Music Streaming Application', img:'github.png'}
 ]
   const completedIntern = [{name:'Remote Software Solution', img:'RSS.webp', role: 'Data Analyst'},]
-  const cultural = [{name:'VIT Alumni Association (VITAA)', img:'https://vaave.s3.amazonaws.com/assets/site_content/151534243/logo-cms.png', role: 'Volunteer'},{name:'QwikSkills', img:'https://vaave.s3.amazonaws.com/assets/site_content/151534243/logo-cms.png', role: 'Campus Amabssador'},{name:'Braniac - IMPERIUM ’22 - An International Management Extravaganza', img:'https://vaave.s3.amazonaws.com/assets/site_content/151534243/logo-cms.png', role: '3rd Position'},]
+  const cultural = [{name:'VIT Alumni Association (VITAA)', img:'https://vaave.s3.amazonaws.com/assets/site_content/151534243/logo-cms.png', role: 'Volunteer'},{name:'QwikSkills', img:'https://imgs.search.brave.com/N4p8o2LkvC-ULvl8-J8kWzMsHOs5wSraSj1GZEYAjQE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMueW91cnN0b3J5/LmNvbS9jcy9pbWFn/ZXMvY29tcGFueV9w/cm9kdWN0cy9xd2lr/c2tpbGxzXzE2MzI5/MzMwMDQyODcucG5n', role: 'Campus Amabssador'},{name:'Braniac - IMPERIUM ’22 - An International Management Extravaganza', img:'https://vaave.s3.amazonaws.com/assets/site_content/151534243/logo-cms.png', role: '3rd Position'},]
 
 
   return (

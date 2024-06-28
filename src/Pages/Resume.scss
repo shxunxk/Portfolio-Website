@@ -1,7 +1,9 @@
 .resume{
     height:100%;
-    width:100%;
-    margin-bottom: 10%;
+    width:90%;
+    margin: 5%;
+    border:2px black solid;
+    border-radius: 20px;
 
     .category{
         margin-right: 5%;
@@ -10,7 +12,8 @@
         padding-top: 5%;
 
         .header{
-            padding-bottom: 1%;
+            border-bottom: 1px black solid;
+            margin-bottom: 1%;
         }
     }
 }
