@@ -27,10 +27,12 @@ export default function Navbar({header}) {
   return (
     <div className='navbar'>
       <div className='wrapper'>
-        <div style={{backgroundColor:'white', width:'3%', height:'10%', alignItems:'center', borderRadius:'30px'}}>
-          <img src={img||`menu.png`} style={{height:'10px'}} onClick={()=>dropdown()}/>
+        <div style={{height:'10%', alignItems:'center', width:'100px'}}>
+          <div style={{backgroundColor:'white', width:'40%', borderRadius:'30px'}}>
+          <img src={img||`menu.png`} style={{width:'30%' ,height:'10px'}} onClick={()=>dropdown()}/>
+          </div>
         </div>
-        <motion.span style={{fontSize:'25px'}} initial={{opacity:0, scale:0.0}} animate={{opacity:1, scale:1}} transition={{duration:0.5}} className='head'>{header}</motion.span>
+        <motion.span style={{fontSize:'25px'}} initial={{opacity:0, scale:0.0}} animate={{opacity:1, scale:1}} transition={{duration:2}} className='head'>{header}</motion.span>
         <div className='social' >
             <Link to="https://www.linkedin.com/in/shaunak-nagvenkar-b3781321a/" target="_blank"><img src='linkedin.png' alt=""/></Link>
             <Link to="https://www.instagram.com/_shaunxk_/" target="_blank"><img src='instagram.png' alt=""/></Link>

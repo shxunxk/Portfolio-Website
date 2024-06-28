@@ -1,23 +1,39 @@
-.hero{
+.hero {
     overflow: hidden;
     position: relative;
-    flex:1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    height: 100vh;
+    width: 100%;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("https://freefrontend.com/assets/img/css-background-patterns/2023-playing-with-background-blend-mode.png");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.6; /* 20% opacity */
+        z-index: 1; /* Behind the content */
+    }
 
-    .wrapper{
+    .wrapper {
         max-width: 1366px;
         height: 100%;
         margin: auto;
         display: flex;
         text-align: center;
+        position: relative; /* To be on top of the pseudo-element */
+        z-index: 2;
 
         .textContainer{
             display: flex;
             flex-direction: column;
             width: 100%;
-            // background-image: "https://imgs.search.brave.com/Y_H6up8Cza0wSZDqR3QF0DlU8CbpxdTz8gethIXUPZg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS12ZWN0/b3Ivd2hpdGUtZ2xv/d2luZy1saWdodC1i/dXJzdC1leHBsb3Np/b24tdHJhbnNwYXJl/bnQtYmFja2dyb3Vu/ZC1icmlnaHQtc3Rh/ci1mbGFyZS1leHBs/b2RlXzc1NTIyOC01/NzYuanBnP3NpemU9/NjI2JmV4dD1qcGc";
 
             h1{
                 font-size: 50px;

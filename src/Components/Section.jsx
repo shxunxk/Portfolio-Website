@@ -2,10 +2,10 @@ import WorkCard from "./WorkCard/WorkCard";
 
 export default function Section({title, projects}) {
   return (
-    <div style={{padding:'5%'}}>
-        {title && <h1 style={{fontSize:'25px', paddingBottom:'5%'}}>{title}</h1>}
-        <div style={{display: "grid",gridTemplateColumns: "repeat(5, 1fr)",
-    gap: "20px",justifyContent:'center'}}>
+    <div style={{padding:'3%'}}>
+        {title && <h4 style={{paddingBottom:'2%'}}>{title}</h4>}
+        <div style={{display: "grid",gridTemplateColumns: "repeat(3, 1fr)",
+    gap: "10px",justifyContent:'center'}}>
         {projects.map((item, index)=>{
               return(
                 <div key={index} style={{width: '100%'}}>

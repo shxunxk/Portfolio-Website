@@ -3,6 +3,7 @@
         flex-direction: column;
         justify-content: space-between;
         width: 100%;
+        
         .contact{
             width: 100%;
             display: flex;
@@ -10,8 +11,9 @@
             justify-content: center;
             background-color: black;
             color: beige;
-            min-height: 95%;
+            height: 95%;
             gap: 2%;
+            padding:20px;
         
             .sub{
                 flex: 1;
@@ -48,8 +50,5 @@
                     text-align: center
                 }
             };            
-            #sub3{
-                
-            }
         }
 }

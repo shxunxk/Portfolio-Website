@@ -11,19 +11,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 200px;
     gap:10px;
     text-align: center;
     background-color:"yellowgreen";
+    height:250px;
     .image{
         width: 90%;
+        height: 60%;
         display: flex;
             justify-content: center;
             align-items: center;
             .img{
                 border-radius: 5px;
-                max-height: 100%;
-                max-width: 100%;
+                width:200px;
+                min-height: 30%;
+                max-height: 80%;
             }
         .textBox{
             .name{

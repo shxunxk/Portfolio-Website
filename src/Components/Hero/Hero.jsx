@@ -37,7 +37,7 @@ export default function hero({getPage}) {
     <div className='hero'>
       <div className='wrapper'>
         <motion.div variants={textVariants} className='textContainer' initial="initial" animate="animate">
-          <motion.h1 variants={textVariants}><p>Machine Learning .<br/> Data Science .<br/> Web Development .</p></motion.h1>
+          <motion.h1 style={{/*backgroundColor:'#4d097566', padding: '50px', borderRadius:'50px'*/}} variants={textVariants}><p>Machine Learning .<br/> Data Science .<br/> Web Development .</p></motion.h1>
           <motion.div variants={textVariants} className='buttons'>
             <Link to='/latest-work'>
               <motion.button className='button'> Latest Work </motion.button>

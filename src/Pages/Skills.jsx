@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Skills = ({getPage}) => {
     getPage('My Skillset')
@@ -35,7 +36,7 @@ const Skills = ({getPage}) => {
 
     return (
         <>
-            <div className='skill' style={{padding:"0px 50px 0px 50px"}}>
+<div className='skill' style={{ padding: "50px 50px 0px 50px", backgroundImage: `url('{https://img.freepik.com/free-photo/white-paper-texture-background_23-2148171225.jpg?t=st=1718901145~exp=1718904745~hmac=65722fe157a0dffaddba6b9accd25bc59c342fb44374f1b8b15289a10d268b36&w=360}')` }}>
                 {Object.entries(skills).map(([key, skill]) => (
                     <div key={key} style={{textAlign:'center', paddingBottom:'8%' }}>
                         <h2 style={{paddingBottom:'8%', font:'bold'}}>{skill.Title}</h2>
@@ -43,10 +44,10 @@ const Skills = ({getPage}) => {
                             {Object.entries(skill).map(([category, items]) => (
                                 category !== 'Title' && (
                                     <div key={category}>
-                                        <h4 style={{paddingBottom:'2%'}}>{category}:</h4>
+                                        <h4 style={{paddingBottom:'2%'}}>{category}</h4>
                                         <div style={{display:'grid',gridTemplateColumns: "repeat(3, 1fr)", gap:'1%'}}>
                                             {Object.entries(items).map(([subCategory, subItems]) => (
-                                                <div key={subCategory} style={{height:'250px', width:'100%', backgroundColor:'yellowgreen', borderRadius:'20px', display: 'flex', flexDirection:'column', alignItems:'center', padding:"5%"}}>
+                                                <motion.div key={subCategory} whileHover={{backgroundColor:'#14150e', color:'white'}} style={{height:'250px', width:'100%', backgroundColor:'yellowgreen', borderRadius:'20px', display: 'flex', flexDirection:'column', alignItems:'center', padding:"5%"}}>
                                                     <img style={{height:'70%', padding:'3%', borderRadius:'30px'}} src = {subItems["img"]}/>
                                                     <h4>{subCategory}</h4>
                                                     {subItems.details.length > 0 && (
@@ -56,7 +57,7 @@ const Skills = ({getPage}) => {
                                                             ))}
                                                         </div>
                                                     )}
-                                                </div>
+                                                </motion.div>
                                             ))}
                                         </div>
                                     </div>

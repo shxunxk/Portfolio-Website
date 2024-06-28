@@ -9,7 +9,7 @@ export default function WorkCard({item}) {
               <img src={item.img} className='img'></img>
         </div>
         <div className='textBox'>
-              <p className='name'>{item.name}</p>
+              <p className='name'><p>{item.role && `${item.role}`}</p>{item.name}</p>
             </div>
     </div>
     </Link>
