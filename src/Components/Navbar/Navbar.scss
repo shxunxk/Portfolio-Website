@@ -2,6 +2,7 @@
     width: 100%;
     color: rgb(255, 255, 255);
     background-color: black;
+    height: 100%;
 
     .wrapper {
         display: flex;
@@ -9,6 +10,7 @@
         justify-content: space-between;
         text-align: center;
         padding: 1.5%;
+        height: 100%;
         span {
             font-weight: bold;
             font-size: 5vh;

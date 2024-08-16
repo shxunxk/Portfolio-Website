@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     &::before {
         content: "";
@@ -14,7 +14,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: url("https://freefrontend.com/assets/img/css-background-patterns/2023-playing-with-background-blend-mode.png");
+        background-image: url("");
         background-size: cover;
         background-position: center;
         opacity: 0.6; /* 20% opacity */
@@ -22,12 +22,12 @@
     }
 
     .wrapper {
-        max-width: 1366px;
+        max-width: 100%;
         height: 100%;
         margin: auto;
         display: flex;
         text-align: center;
-        position: relative; /* To be on top of the pseudo-element */
+        position: relative;
         z-index: 2;
 
         .textContainer{
@@ -37,7 +37,7 @@
 
             h1{
                 font-size: 50px;
-                color: rgb(0, 0, 0);
+                // color: rgb(0, 0, 0);
             }
 
             .buttons{
@@ -45,7 +45,7 @@
                     padding: 20px;
                     border: 2px solid black;
                     border-radius: 10px;
-                    background-color: transparent;
+                    background-color: white;
                     color: black;
                     margin-right: 20px;
                     font-weight: 600;
@@ -65,7 +65,7 @@
         font-size: 20vh;
         bottom: 0px;
         white-space: nowrap;
-        color:#4d097566;
+        color:#ffffff;
         width: 50%;
         font-weight: bold;
         z-index: 2;

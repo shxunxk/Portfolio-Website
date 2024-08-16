@@ -1,13 +1,17 @@
-import Hero from '../Components/Hero/Hero'
+import React from 'react';
+import Hero from '../Components/Hero/Hero';
+import About from './About';
+import LatestWork from './LatestWork';
+import './Home.scss';
 
-const Home = ({getPage})=>{
-    return(
-    <>
-<div id='Homepage' style={{color:'black', minHeight: '100vh', display: "flex", flexDirection: 'column', width: '100%'}}> 
-        <Hero getPage={getPage}/>
+const Home = () => {
+  return (
+    <div id='Homepage'>
+      <Hero/>
+      <About/>
+      <LatestWork/>
     </div>
-    </>
-    )
+  );
 };
 
 export default Home;

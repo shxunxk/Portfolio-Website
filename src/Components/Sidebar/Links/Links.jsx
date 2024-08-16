@@ -1,8 +1,8 @@
 import {motion} from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const items = ['Homepage', 'Latest Work', 'About Me'];
-const path = ['', 'latest-work', 'about']
+const items = ['Homepage'];
+const path = ['']
 
 export default function Links() {
   return (

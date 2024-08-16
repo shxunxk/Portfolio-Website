@@ -31,21 +31,20 @@ const sliderVariants = {
 },
 }
 
-export default function hero({getPage}) {
-  getPage('Hi There!!')
+export default function hero() {
   return (
     <div className='hero'>
       <div className='wrapper'>
         <motion.div variants={textVariants} className='textContainer' initial="initial" animate="animate">
           <motion.h1 style={{/*backgroundColor:'#4d097566', padding: '50px', borderRadius:'50px'*/}} variants={textVariants}><p>Machine Learning .<br/> Data Science .<br/> Web Development .</p></motion.h1>
-          <motion.div variants={textVariants} className='buttons'>
+          {/* <motion.div variants={textVariants} className='buttons'>
             <Link to='/latest-work'>
               <motion.button className='button'> Latest Work </motion.button>
             </Link>
             <Link to='/about'>
               <motion.button className='button'> About Me </motion.button>
             </Link>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
       <motion.div className="slidingText" variants={sliderVariants} initial="initial" animate="animate"> 

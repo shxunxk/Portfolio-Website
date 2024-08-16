@@ -3,7 +3,6 @@ import './app.scss';
 import About from './Pages/About.jsx';
 import Home from './Pages/Home.jsx';
 import LatestWork from './Pages/LatestWork.jsx';
-import Skills from './Pages/Skills.jsx';
 import './app.scss';
 import Navbar from './Components/Navbar/Navbar.jsx';
 import Bottom from './Components/Bottom/Bottom.jsx';
@@ -16,9 +15,9 @@ import Resume from './Pages/Resume.jsx'
 const App = () => {
 
   const [header, setHeader] = useState('Hi There!!');
-  const getPage = (val) => {
-    setHeader(val);
-  };
+  // const getPage = (val) => {
+  //   setHeader(val);
+  // };
 
   const sliderVariants = {
     initial: {
@@ -35,21 +34,21 @@ const App = () => {
   };
 
   return (
-    <div>
-      <div style={{ zIndex: 100, width: '100%', minHeight: '60px' }}>
+    <div className='main' style={{position: 'relative'}}>
+      <div style={{ zIndex: 100, width: '100%', height: '80px', position: 'fixed', top: 0, left: 0, borderBottom: '1px solid gray', borderBottomRightRadius:'20px', borderBottomLeftRadius:'20px' }}>
         <Navbar header={header} />
       </div>
       <div className='page'>
         <div className='app-container' style={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <Routes>
             <Route path='/'>
-              <Route index element={<Home getPage={getPage} />} />
-              <Route path='latest-work/' element={<LatestWork getPage={getPage} />} />
-              <Route path='resume/' element={<Resume getPage={getPage} />} />
+              <Route index element={<Home/>} />
+              {/* <Route path='latest-work/' element={<LatestWork/>} /> */}
+              <Route path='resume/' element={<Resume/>} />
               <Route path='pdf/:item' element={<PdfViewer/>} />
-              <Route path='workinfo/:item' element={<WorkDetail getPage={getPage} />} />
-              <Route path='about/' element={<About getPage={getPage} />} />
-              <Route path='skills/' element={<Skills getPage={getPage} />} />
+              <Route path='workinfo/:item' element={<WorkDetail/>} />
+              {/* <Route path='about/' element={<About/>} /> */}
+              {/* <Route path='skills/' element={<Skills/>} /> */}
               <Route path='*' element={<NotFound />} />
             </Route>
           </Routes>

@@ -1,7 +1,7 @@
 import './Resume.scss'
 import { Link } from 'react-router-dom'
 
-const Resume = ({ getPage }) => {
+const Resume = () => {
 
     const details = {
         "Mobile": '7757027399',
@@ -28,8 +28,6 @@ const Resume = ({ getPage }) => {
     const internship = {
         'Remote Software Solutions': "Worked as a Data Analyst gaining essential skills about Database Management and Data Analysis updating myself with the necessary skills in today's world. Tech Stack - PostgreSQL, PowerBI"
     };
-
-    getPage("My Resume");
 
     return (
         <div className="resume">

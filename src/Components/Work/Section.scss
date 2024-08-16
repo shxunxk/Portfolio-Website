@@ -1,0 +1,23 @@
+.section {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px
+  }
+
+  .section-title {
+    font-size:2rem;
+    text-align: left;
+  }
+  
+  .section-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+
+    .card{
+      width: 100%;
+    }
+  }
+  

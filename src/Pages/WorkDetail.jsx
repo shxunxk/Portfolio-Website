@@ -28,7 +28,7 @@ const WorkDetail = () => {
 
     console.log(curDet?.pdf)
     return (
-        <div className="head" style={{backgroundColor:'white', minHeight: '100vh', textAlign:'center', padding: '10%'}}>
+        <div className="head" style={{minHeight: '100vh', textAlign:'center', padding: '10%'}}>
             <div style={{paddingBottom: '10%'}}>
                 <h1 className="header" style={{textAlign: 'center'}}>{curDet?.name}</h1>
                 <h3 className="sub-header" style={{textAlign: 'center'}}>{curDet?.role}</h3>
@@ -37,9 +37,9 @@ const WorkDetail = () => {
             {/* <img src={curDet?.img}/> */}
             {curDet && (
                     <div style={{textAlign: 'center', display: "flex", flexDirection: 'column', alignItems: 'center' }}>
-                        <p style={{ width: '10%', backgroundColor: "gray", borderRadius: '10px', padding: '1%' }}>
+                        {curDet.pdf && <p style={{ width: '10%', backgroundColor: "gray", borderRadius: '10px', padding: '1%' }}>
                             <Link to={`/pdf/${curDet.pdf}`}>View Certificate</Link>
-                        </p>
+                        </p>}
                     </div>
             )}        </div>
     );

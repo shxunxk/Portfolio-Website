@@ -22,7 +22,7 @@ export default function Navbar({header}) {
     setImg('menu.png');
   };
   
-  const options = [{'Home':'/'},{'Latest Work': '/latest-work'},{'About':'/about'},{'Skills':'/skills'},{'Resume':'/resume'}]
+  const options = [{'Home':'/'},{'Resume':'/resume'}]
 
   return (
     <div className='navbar'>
