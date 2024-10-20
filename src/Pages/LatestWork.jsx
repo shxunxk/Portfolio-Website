@@ -1,14 +1,43 @@
+// import './LatestWork.scss';
+// import Section from '../Components/Work/Section';
+// import { motion } from 'framer-motion';
+
+// export default function LatestWork() {
+
+
+
+//   return (
+//     <div className="LatestWork">
+//       <motion.h2
+//           className='header'
+//           style={{ fontSize: '5rem', width: '100%', textAlign:'center' }}
+//           initial={{ x: -1000 }}
+//           whileInView={{ x: 0 }}
+//           transition={{ duration: 2 }}
+//         >
+//           Latest Work
+//         </motion.h2>
+//       <Section title="Internships" projects={completedIntern} />
+//       <Section title="Projects" completedProjects={completed} pendingProjects={pending} />
+//       <Section title="Cultural Activities" projects={cultural} />
+//     </div>
+//   );
+// }
+
 import './LatestWork.scss';
 import Section from '../Components/Work/Section';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 export default function LatestWork() {
+  const [activeTab, setActiveTab] = useState('Internships'); // State to track the active section
 
-  const completed = [{ name: 'Kalaburagi Airport Website', img: 'KalaburagiAirport.png', desc: "Within this project, I collaborated as a team member to contribute to the development of the Frontend for a Management Information System (MIS) tailored for Kalaburagi Airport. This system was meticulously designed to support airport employees in their daily operational tasks, ensuring a seamless workflow. My primary responsibilities encompassed crafting an intuitive user interface that would enhance user engagement and streamline processes. I integrated various design components to create a cohesive and user-friendly experience. Additionally, I implemented several features aimed at improving the overall user interaction with the MIS. The project involved rigorous testing and iterative development to ensure that the final product met the specific needs of airport staff. This experience not only honed my frontend development skills but also provided valuable insights into the intricacies of designing software for specialized industry use." }];
+  const sections = ['Internships', 'Projects', 'Cultural Activities'];
+
+  const completed = [{ name: 'Management Information System - Kalaburagi Airport Website', img: 'KalaburagiAirport.png', desc: "Within this project, I collaborated as a team member to contribute to the development of the Frontend for a Management Information System (MIS) tailored for Kalaburagi Airport. This system was meticulously designed to support airport employees in their daily operational tasks, ensuring a seamless workflow. My primary responsibilities encompassed crafting an intuitive user interface that would enhance user engagement and streamline processes. I integrated various design components to create a cohesive and user-friendly experience. Additionally, I implemented several features aimed at improving the overall user interaction with the MIS. The project involved rigorous testing and iterative development to ensure that the final product met the specific needs of airport staff. This experience not only honed my frontend development skills but also provided valuable insights into the intricacies of designing software for specialized industry use." },    { name: 'One Food Nation - Restaurant Management System', img: 'OFN.png', "desc": "In this project, I am developing a comprehensive web application interface for a restaurant, designed to streamline its administrative procedures and improve overall operational efficiency. The system includes a robust database to store and manage restaurant data, such as menu items, orders, reservations, and customer information. My role involves creating an intuitive user interface that allows restaurant staff to easily navigate and manage daily tasks. I am implementing features like real-time order tracking, inventory management, and customer feedback integration. This project aims to enhance the dining experience by providing staff with the tools they need to offer prompt and accurate service. Additionally, the system is designed to generate insightful reports to assist in decision-making processes. Through this project, I am gaining valuable experience in web development, database management, and the hospitality industry’s specific requirements."},    { name: 'AgroHealth - Plant Defect Detector', img: 'AgroHealth.png', "desc": "In the AgroHealth project, I am working on developing a machine learning and deep learning model specifically designed to assess the health of potatoes in agricultural fields. The goal of this project is to create a reliable system that can detect defects and determine whether the potatoes are safe for consumption. My responsibilities include gathering and preprocessing a large dataset of potato images, training the model to recognize various defects, and optimizing the algorithm for accuracy and efficiency. This project involves extensive research into the latest advancements in machine learning and image recognition technologies. By applying these techniques, I aim to provide farmers with a powerful tool to monitor crop health and improve yield quality. This project has given me hands-on experience with AI, deep learning, and the practical applications of these technologies in agriculture."}];
+ 
   const pending = [
     { name: 'Barbara - AI Virtual Assistant', img: '', "desc":"As part of my project, I am developing an innovative artificial intelligence virtual assistant named Barbara. This AI is designed to understand and process voice instructions from users, providing intelligent and relevant responses. The primary goal of Barbara is to streamline user interaction with technology by offering a more natural and intuitive way to access information and perform tasks. Throughout the development process, I have focused on incorporating advanced natural language processing techniques and machine learning algorithms to enhance Barbara’s comprehension and response accuracy. This project has provided me with extensive experience in AI development, voice recognition technology, and user interface design, aiming to create a virtual assistant that can adapt to various user needs and scenarios, ultimately improving efficiency and user satisfaction." },
-    { name: 'One Food Nation - Restaurant Management System', img: 'OFN.png', "desc": "In this project, I am developing a comprehensive web application interface for a restaurant, designed to streamline its administrative procedures and improve overall operational efficiency. The system includes a robust database to store and manage restaurant data, such as menu items, orders, reservations, and customer information. My role involves creating an intuitive user interface that allows restaurant staff to easily navigate and manage daily tasks. I am implementing features like real-time order tracking, inventory management, and customer feedback integration. This project aims to enhance the dining experience by providing staff with the tools they need to offer prompt and accurate service. Additionally, the system is designed to generate insightful reports to assist in decision-making processes. Through this project, I am gaining valuable experience in web development, database management, and the hospitality industry’s specific requirements."},
-    { name: 'AgroHealth - Potato Defect Detector', img: 'AgroHealth.png', "desc": "In the AgroHealth project, I am working on developing a machine learning and deep learning model specifically designed to assess the health of potatoes in agricultural fields. The goal of this project is to create a reliable system that can detect defects and determine whether the potatoes are safe for consumption. My responsibilities include gathering and preprocessing a large dataset of potato images, training the model to recognize various defects, and optimizing the algorithm for accuracy and efficiency. This project involves extensive research into the latest advancements in machine learning and image recognition technologies. By applying these techniques, I aim to provide farmers with a powerful tool to monitor crop health and improve yield quality. This project has given me hands-on experience with AI, deep learning, and the practical applications of these technologies in agriculture."},
   ];
 
   const completedIntern = [
@@ -21,20 +50,47 @@ export default function LatestWork() {
     { name: 'Braniac - IMPERIUM ’22', img: '', role: '3rd Position', "desc": "Braniac is a prestigious quiz competition organized by Loyola College Chennai as part of the IMPERIUM ’22 International Management Extravaganza. I participated in this highly competitive event and secured the 3rd place, showcasing my knowledge and quick thinking across various topics. The competition was designed to challenge participants with a wide range of questions, testing their expertise in management and general knowledge. My success in this competition not only highlighted my proficiency in these areas but also demonstrated my ability to perform under pressure. This experience provided me with the opportunity to network with other talented individuals and furthered my understanding of effective preparation and strategy in competitive environments. Participating in Braniac was a rewarding experience that enhanced my skills in critical thinking, problem-solving, and teamwork." },
   ];
 
+  const renderSection = () => {
+    switch (activeTab) {
+      case 'Internships':
+        return <Section title="Internships" projects={completedIntern} />;
+      case 'Projects':
+        return <Section title="Projects" completedProjects={completed} pendingProjects={pending} />;
+      case 'Cultural Activities':
+        return <Section title="Cultural Activities" projects={cultural} />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="LatestWork">
       <motion.h2
-          className='header'
-          style={{ fontSize: '5rem', width: '100%', textAlign:'center' }}
-          initial={{ x: -1000 }}
-          whileInView={{ x: 0 }}
-          transition={{ duration: 2 }}
-        >
-          Latest Work
-        </motion.h2>
-      <Section title="Internships" projects={completedIntern} />
-      <Section title="Projects" completedProjects={completed} pendingProjects={pending} />
-      <Section title="Cultural Activities" projects={cultural} />
+        className='header'
+        style={{ fontSize: '5rem', width: '100%', textAlign: 'center', display:"flex", flexDirection:'column', justifyContent:'center', height:'100vh' }}
+        initial={{ x: -1000 }}
+        whileInView={{ x: 0 }}
+        transition={{ duration: 2 }}
+      >
+        Latest Work
+      </motion.h2>
+
+      <div className="slider">
+        <div style={{display:'flex', justifyContent:'center'}}>
+        {sections.map((section) => (
+          <button
+            key={section}
+            className={`slider-tab ${activeTab === section ? 'active' : ''}`}
+            onClick={() => setActiveTab(section)}
+            style={{borderRadius:'5px', color:'black'}}
+          >
+            {section}
+          </button>
+        ))}
+        </div>
+        
+         {renderSection()}
+      </div>
     </div>
   );
 }

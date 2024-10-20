@@ -5,14 +5,16 @@ import { motion } from 'framer-motion';
 import WhoAmI from '../Components/About/WhoAmI';
 import Education from '../Components/About/Education';
 import Skills from '../Components/About/Skills';
+import LatestWork from '../Pages/LatestWork';
 
 export default function About() {
 
   return (
-    <div className="About" style={{ minHeight: '100vh', overflow: 'hidden' }}>
+    <div className="About" style={{ minHeight: '100vh', overflow: 'hidden'}}>
       <WhoAmI />
-      <Education />
       <Skills />
+      <LatestWork/>
+      <Education />
     </div>
   );
 }

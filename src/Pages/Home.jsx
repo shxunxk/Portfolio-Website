@@ -9,7 +9,6 @@ const Home = () => {
     <div id='Homepage'>
       <Hero/>
       <About/>
-      <LatestWork/>
     </div>
   );
 };

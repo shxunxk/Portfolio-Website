@@ -35,7 +35,7 @@ const App = () => {
 
   return (
     <div className='main' style={{position: 'relative'}}>
-      <div style={{ zIndex: 100, width: '100%', height: '80px', position: 'fixed', top: 0, left: 0, borderBottom: '1px solid gray', borderBottomRightRadius:'20px', borderBottomLeftRadius:'20px' }}>
+      <div style={{ zIndex: 100, width: '100%', height: '80px', top: 0, left: 0, borderBottomRightRadius:'20px', borderBottomLeftRadius:'20px', position:'fixed'}}>
         <Navbar header={header} />
       </div>
       <div className='page'>

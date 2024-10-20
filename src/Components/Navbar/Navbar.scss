@@ -1,8 +1,9 @@
 .navbar {
     width: 100%;
-    color: rgb(255, 255, 255);
-    background-color: black;
+    color: rgb(0, 0, 0);
     height: 100%;
+    background-color: rgb(255, 251, 251);
+    border: 2px white;
 
     .wrapper {
         display: flex;
@@ -24,7 +25,6 @@
 
             img {
                 width: 20px;
-                border: 1px solid white;
                 border-radius: 5px;
                 background-color: white;
             }

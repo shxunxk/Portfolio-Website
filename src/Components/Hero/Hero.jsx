@@ -75,7 +75,7 @@ export default function Hero() {
           animate="animate"
         >
           <motion.h1 variants={textVariants}>
-            <p>{skills[currentSkillIndex]} .<br /> {cap[selectedCap]} .</p>
+            <h1>{skills[currentSkillIndex]}</h1><h2>{cap[selectedCap]}</h2>
           </motion.h1>
         </motion.div>
       </div>
