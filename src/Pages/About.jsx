@@ -14,7 +14,7 @@ export default function About() {
       <WhoAmI />
       <Skills />
       <LatestWork/>
-      <Education />
+      {/* <Education /> */}
     </div>
   );
 }

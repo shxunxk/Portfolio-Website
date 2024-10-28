@@ -260,11 +260,6 @@ const Skills = () => {
         visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
     };
 
-    const hoverEffect = {
-        scale: 1.01,
-        transition: { duration: 0.3 }
-    };
-
     const skills = {
         "webdev": {
                     "Title": "Web Development",
@@ -282,7 +277,7 @@ const Skills = () => {
                     "Title": "Artificial Intelligence",
                     "Area Covered": {
                         "Machine Learning": { "img": 'https://imgs.search.brave.com/CF81viXsX8Eqm98vB7SDVxrtbQo-vXILiJhszCIwH5k/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTMx/MDI5MzE4MS9waG90/by9kZWVwLWxlYXJu/aW5nLWFydGlmaWNp/YWwtaW50ZWxsaWdl/bmNlLWJhY2tncm91/bmQuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPXBPTV95QzQt/YnNOTTBVX0xmbTda/Nlp3LWNiOHV1Y0da/eC1IOG41TTF0eWc9', "details": ["Regression model prediction", "Classification model"] },
-                        "Deep Learning": { "img": 'https://imgs.search.brave.com/8mrF-CdT2eQvR93HnLs7k270qLnvBFo_RgTRuS5_gFc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZWVrc2Zvcmdl/ZWtzLm9yZy93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMTEyMjYx/NTAwNTIva2lzc3Bu/Z2RlZXBsZWFybmlu/Z2FydGlmaWNpYWxu/ZXVyYWxuZXR3b3Jr/bWFjaGluZWxlbmV1/cm9uczVhZGI3N2Q2/MTU5MTg5Nzc1Njkx/NjYxNTI0MzMyNTAy/MDg4NC5wbmc', "details": ["Artificial Neural Network", "Convolutional Neural Network", "Recurrent Neural Network"] },
+                        "Deep Neural Networks": { "img": 'https://imgs.search.brave.com/8mrF-CdT2eQvR93HnLs7k270qLnvBFo_RgTRuS5_gFc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZWVrc2Zvcmdl/ZWtzLm9yZy93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMTEyMjYx/NTAwNTIva2lzc3Bu/Z2RlZXBsZWFybmlu/Z2FydGlmaWNpYWxu/ZXVyYWxuZXR3b3Jr/bWFjaGluZWxlbmV1/cm9uczVhZGI3N2Q2/MTU5MTg5Nzc1Njkx/NjYxNTI0MzMyNTAy/MDg4NC5wbmc', "details": ["Artificial Neural Network", "Convolutional Neural Network", "Recurrent Neural Network"] },
                         "Generative AI": { "img": 'https://imgs.search.brave.com/BvzJUSSAr8BgHaYXh5a0zQhlS6TMOsubnqAPHU94wZI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8x/LzE2L0dlbkFJX0Fn/ZW50LnBuZw', "details": ["Large Language Models (LLM's)"] }
                     }
                 },
@@ -336,7 +331,9 @@ const Skills = () => {
                                         <motion.div
                                             key={skillKey}
                                             className="skill-item"
-                                            whileHover={hoverEffect}
+                                            whileHover={{ scale: 1.05 }}
+                                            whileTap={{ scale: 0.95 }}
+                                            transition={{ type: "spring", stiffness: 400, damping: 10 }}
                                         >
                                             <motion.img
                                                 src={skill.img}

@@ -20,9 +20,10 @@
       }
 
       &.active {
-        background-color: #007bff;
+        background-color: transparent;
         color: white;
         font-weight: bold;
+        border-color: white;
       }
     }
   }

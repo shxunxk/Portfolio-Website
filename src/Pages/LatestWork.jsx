@@ -82,7 +82,7 @@ export default function LatestWork() {
             key={section}
             className={`slider-tab ${activeTab === section ? 'active' : ''}`}
             onClick={() => setActiveTab(section)}
-            style={{borderRadius:'5px', color:'black'}}
+            style={{borderRadius:'5px', color:`${activeTab === section ? 'white' : 'black'}`, border:`${activeTab === section ? '1px white solid' : '1px black solid'}`}}
           >
             {section}
           </button>

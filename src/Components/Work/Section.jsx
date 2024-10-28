@@ -21,7 +21,7 @@ export default function Section({ title, completedProjects = [], pendingProjects
         </motion.h2>
       )}
       <div className="section-content">
-        {completedProjects.length > 0 && <h4>Completed Projects</h4>}
+        {completedProjects.length > 0 && <h4 className='title'>Completed Projects</h4>}
         {completedProjects.map((item, index) => (
           <motion.div 
             key={index} 
@@ -34,7 +34,7 @@ export default function Section({ title, completedProjects = [], pendingProjects
           </motion.div>
         ))}
 
-        {pendingProjects.length > 0 && <h4>Pending Projects</h4>}
+        {pendingProjects.length > 0 && <h4 className='title'>Pending Projects</h4>}
         {pendingProjects.map((item, index) => (
           <motion.div 
             key={index} 

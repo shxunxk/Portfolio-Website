@@ -16,6 +16,11 @@
     gap: 2rem;
     justify-content: center;
 
+    .title{
+      display: flex;
+      text-align: left;
+    }
+
     .card{
       width: 100%;
     }

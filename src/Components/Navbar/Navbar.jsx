@@ -28,7 +28,7 @@ export default function Navbar({header}) {
     <div className='navbar'>
       <div className='wrapper'>
         <div style={{alignItems:'center', width:'100px', height:'100%'}}>
-          <div style={{backgroundColor:'white', border: '2px black', width:'40%', height:'100%', borderRadius:'50%',display:'flex', alignItems:'center'}}>
+          <div style={{backgroundColor:'white', width:'35%', height:'100%', borderRadius:'50%',display:'flex', alignItems:'center', justifyContent:'center', border:'1px black solid'}}>
           <img src={img||`menu.png`} style={{width:'30%'}} onClick={()=>dropdown()}/>
           </div>
         </div>

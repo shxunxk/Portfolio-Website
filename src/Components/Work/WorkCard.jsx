@@ -21,6 +21,7 @@ export default function WorkCard({ item }) {
         </div>
         <div className="text">
           {item.desc}
+          <p style={{color:'black', display:'flex', justifyContent:'right', marginTop:'20px'}}>Click for more info</p>
         </div>
       </Link>
     </motion.div>
